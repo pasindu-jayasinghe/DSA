@@ -29,7 +29,6 @@ public class Queues_1 {
         queue.add(10);
         queue.add(11);
         queue.add(12);
-        queue.add(13);
         queue.remove();
         System.out.println(queue);
 
