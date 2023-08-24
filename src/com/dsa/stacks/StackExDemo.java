@@ -1,6 +1,6 @@
 package com.dsa.stacks;
 
-public class StackImplementEx {
+public class StackExDemo {
 
     public static void main(String[] args) {
         StackEx stack = new StackEx();

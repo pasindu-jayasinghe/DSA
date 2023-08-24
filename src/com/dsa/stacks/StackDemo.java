@@ -1,8 +1,6 @@
 package com.dsa.stacks;
 
-import java.sql.Array;
-
-public class StackImplement {
+public class StackDemo {
 
 
     public static void main(String[] args) {
