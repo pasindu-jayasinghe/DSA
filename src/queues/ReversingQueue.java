@@ -23,7 +23,6 @@ public class ReversingQueue {
         }
         while (!stack.isEmpty()){
            queue.add(stack.pop());
-
         }
     }
 
