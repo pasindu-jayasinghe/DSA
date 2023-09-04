@@ -1,4 +1,4 @@
-package queues;
+package com.dsa.queues;
 import java.util.Stack;
 
 public class QueueUsingStack {

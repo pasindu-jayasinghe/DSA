@@ -1,4 +1,4 @@
-package queues;
+package com.dsa.queues;
 
 public class QueueUsingStackDemo {
 
