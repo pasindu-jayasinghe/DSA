@@ -2,7 +2,7 @@ package com.dsa.stacks;
 
 import java.util.Stack;
 
-public class Array {
+public class Array_test {
 
     public static void main(String[] args) {
         int [] array = {1,2,3,4,5};

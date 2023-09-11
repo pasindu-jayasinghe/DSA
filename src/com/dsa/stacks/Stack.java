@@ -2,7 +2,7 @@ package com.dsa.stacks;
 
 import java.util.Arrays;
 
-public class Stack {
+public class Stack<C> {
 
     private int count;
     private int[] array = new int[5];

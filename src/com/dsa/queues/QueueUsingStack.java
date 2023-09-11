@@ -10,7 +10,7 @@ public class QueueUsingStack {
         stack.push(item);
     }
 
-    public int  remove(){
+    public int remove(){
         //Todo: check isEmpty()
         while (!stack.isEmpty()){
             stackNew.push(stack.pop());

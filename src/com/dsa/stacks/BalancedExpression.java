@@ -6,7 +6,7 @@ public class BalancedExpression {
 
     public static void main(String[] args) {
         //String str = "(([1] + <2>))[a]";
-        String str = "())";
+        String str = "{(([])[])[]]}";
         System.out.println(isBalance(str));
     }
 
