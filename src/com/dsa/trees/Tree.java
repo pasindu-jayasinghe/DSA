@@ -41,6 +41,19 @@ public class Tree {
 
     }
 
+    public boolean find(int item){
+        var current = root;
+        while (current != null){
+             if(item>current.value){
+                current = current.rightChild;
+            }else if(item<current.value){
+                current = current.leftChild;
+            }else{
+                 return true;
+             }
+        }
+        return false;
+    }
     //no need this when child set inside the while()
     public boolean isChildNull(Node right , Node left){
         return  (right != null && left != null);
