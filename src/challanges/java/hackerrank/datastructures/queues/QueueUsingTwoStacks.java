@@ -36,6 +36,7 @@ class Queue<T> {
         return rightStack.pop();
     }
     T peek(){
+        transferIfNeeded();
         return rightStack.peek();
     }
     void transferIfNeeded(){
