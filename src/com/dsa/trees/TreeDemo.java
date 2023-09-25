@@ -13,7 +13,7 @@ public class TreeDemo {
         tree.insert(8);
         tree.insert(10);
 
-        System.out.println(tree.find(22));
+       tree.traversePreOrder();
 
 
 

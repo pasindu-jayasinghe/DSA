@@ -54,11 +54,41 @@ public class Tree {
         }
         return false;
     }
+
+    public void traversePreOrder(){
+        traversePreOrder(root);
+//      traverseInOrder(root);
+//      traversePostOrder(root);
+    }
+    private void traversePreOrder(Node root){
+        if(root == null)
+            return;
+
+         System.out.println(root.value);
+         traversePreOrder(root.leftChild);
+         traversePreOrder(root.rightChild);
+    }
+    private void traverseInOrder(Node root){
+        if(root == null)
+                return;
+
+        traverseInOrder(root.leftChild);
+        System.out.println(root.value);
+        traverseInOrder(root.rightChild);
+    }
+
+    private void traversePostOrder(Node root){
+        if(root == null)
+            return;
+
+        traversePostOrder(root.leftChild);
+        traversePostOrder(root.rightChild);
+        System.out.println(root.value);
+    }
+
     //no need this when child set inside the while()
     public boolean isChildNull(Node right , Node left){
         return  (right != null && left != null);
     }
-
-
 
 }
