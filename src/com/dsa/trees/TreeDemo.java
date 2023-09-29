@@ -13,7 +13,9 @@ public class TreeDemo {
         tree.insert(8);
         tree.insert(10);
 
-       tree.traversePreOrder();
+       //tree.traversePostOrder();
+        System.out.println(tree.height());
+        System.out.println(tree.min());
 
 
 

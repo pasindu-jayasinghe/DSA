@@ -55,10 +55,10 @@ public class Tree {
         return false;
     }
 
-    public void traversePreOrder(){
-        traversePreOrder(root);
-//      traverseInOrder(root);
-//      traversePostOrder(root);
+    public void traversePostOrder(){
+        //traversePreOrder(root);
+        // traverseInOrder(root);
+        traversePostOrder(root);
     }
     private void traversePreOrder(Node root){
         if(root == null)
@@ -85,6 +85,56 @@ public class Tree {
         traversePostOrder(root.rightChild);
         System.out.println(root.value);
     }
+
+    public int height(){
+        return height(root);
+    }
+    private int height(Node root){
+
+        if(root == null)
+            return -1;
+
+        if(isLeaf(root))
+            return 0;
+
+        return 1 + Math.max(
+                height(root.leftChild),
+                height(root.rightChild));
+
+    }
+
+    //If Tree is BST, can find min from this
+    public int minBST(){
+        if(root == null)
+            throw new IllegalStateException();
+
+        var current = root;
+        var last = current;
+        while (current != null){
+            last = current;
+            current = current.leftChild;
+        }
+        return last.value;
+
+    }
+
+    public int min(){
+        return min(root);
+    }
+    private int min(Node root){
+        if(isLeaf(root))
+            return root.value;
+
+        var left = min(root.leftChild);
+        var right = min(root.rightChild);
+
+        return Math.min(Math.min(left,right),root.value);
+    }
+
+    private boolean isLeaf(Node node){
+        return node.leftChild == null && node.rightChild == null;
+    }
+
 
     //no need this when child set inside the while()
     public boolean isChildNull(Node right , Node left){
