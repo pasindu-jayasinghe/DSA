@@ -21,11 +21,12 @@ public class TreeDemo {
         tree2.insert(6);
         tree2.insert(8);
         tree2.insert(10);
-
-        //tree.traversePostOrder();
-        System.out.println(tree.height());
-        System.out.println(tree.min());
-        System.out.println(tree.equals(tree2));
+//        tree.traversePostOrder();
+//        System.out.println(tree.height());
+//        System.out.println(tree.min());
+//        System.out.println(tree.equals(tree2));
+        tree.swapRoot();
+        System.out.println(tree.isBST());
 
 
 
