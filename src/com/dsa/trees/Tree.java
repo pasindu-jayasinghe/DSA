@@ -131,6 +131,28 @@ public class Tree {
         return Math.min(Math.min(left,right),root.value);
     }
 
+
+    public boolean equals(Tree tree2) {
+        if(tree2 == null)
+            return false;
+
+        return equals(root,tree2.root);
+    }
+
+    private boolean equals(Node first, Node second){
+        if (first == null && second == null)
+            return true;
+
+        if (first != null && second != null){
+            return first.value == second.value &&
+                    equals(first.leftChild, second.leftChild) &&
+                    equals(first.rightChild, second.rightChild);
+
+        }
+        return false;
+
+    }
+
     private boolean isLeaf(Node node){
         return node.leftChild == null && node.rightChild == null;
     }
