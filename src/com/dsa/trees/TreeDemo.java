@@ -31,6 +31,7 @@ public class TreeDemo {
       for (var item : list){
           System.out.println(item);
       }
+      tree.traverseLevelOrder();
 
     }
 

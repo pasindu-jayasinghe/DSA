@@ -194,6 +194,13 @@ public class Tree {
     }
 
 
+    public void traverseLevelOrder(){
+        for (var i = 0; i <= height(); i++){
+            for (var value : getNodesAtDistance(i))
+                System.out.println(value);
+        }
+    }
+
 
 
     private boolean isLeaf(Node node){
