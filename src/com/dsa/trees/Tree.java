@@ -1,6 +1,9 @@
 package com.dsa.trees;
 
+import java.util.ArrayList;
+
 public class Tree {
+  public  int distance ;
 
     private class Node{
         private int value;
@@ -172,6 +175,26 @@ public class Tree {
                 isBST(root.rightChild,root.value+1,max);
 
     }
+    public ArrayList<Integer> getNodesAtDistance(int distance){
+        var list = new ArrayList<Integer>();
+        getNodesAtDistance(root,distance,list);
+        return list;
+
+    }
+    private void getNodesAtDistance(Node root, int distance, ArrayList<Integer> list){
+        if (root == null)
+            return;
+        if(distance == 0){
+            list.add(root.value);
+            return;
+        }
+        getNodesAtDistance(root.leftChild,distance-1, list);
+        getNodesAtDistance(root.rightChild,distance-1, list);
+
+    }
+
+
+
 
     private boolean isLeaf(Node node){
         return node.leftChild == null && node.rightChild == null;

@@ -27,8 +27,10 @@ public class TreeDemo {
 //        System.out.println(tree.equals(tree2));
         tree.swapRoot();
         System.out.println(tree.isBST());
-
-
+      var list =  tree.getNodesAtDistance(1);
+      for (var item : list){
+          System.out.println(item);
+      }
 
     }
 
